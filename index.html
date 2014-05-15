@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>jQuery Gallery</title>
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
   <div class="container clearfix">
@@ -20,6 +21,8 @@
           <!-- first image is viewable to start -->
           <img src="images/fashion/top1large.jpg" />
       </div>
+  
+
 
     </div>
   </div>
@@ -27,10 +30,24 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="fancybox/jquery.fancybox.js?v=2.1.4"></script>
   <script>
+    //document ready
     $(function() {
-      $('.preview a').on('click',function(e){
-        var src = $(this).data('src');
-        $('img.previewFull').attr('src',src);
+      
+      $('.previews a').on('click',function(e){
+        //get source of this a link's data source (the image)
+  
+
+        var src = $(this).attr('data-full');
+        // console.log(this + ' src: ' + src);
+
+        //src =  src.replace('small','large');
+
+        //put that source onto, preview full,
+        $('.full img').attr('src',src);
+        
+
+       // $(this).addClass('img.previewFull');
+
 
       });
     });
