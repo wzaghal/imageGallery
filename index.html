@@ -34,6 +34,8 @@
     //document ready
     $(function() {
 
+      var active = false;
+
       //on clicking a thumbnail image
       $('.previews a').on('click',function(e){  
         //get source of clicked image
@@ -48,16 +50,19 @@
       });//thumbnail on click
 
 
-      $('.full img').on('mouseenter', function(e){
-        
-        $(this).fancybox({
+      //fancy box enlarge
+      // $('.full img').on('mouseenter', function(e){
+        $('.full img').fancybox({
           'transitionIn'  : 'elastic',
           'transitionOut' : 'elastic',
+          'hideOnOverlayClick': true,
           'speedIn'       : 600, 
           'speedOut'      : 200, 
-          'overlayShow'   : false
-        });
-      });//full previews
+          'overlayShow'   : true
+        });       
+      
+
+      //});//full previews
     });//document ready
 
   
