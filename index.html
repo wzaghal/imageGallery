@@ -3,6 +3,7 @@
 <head>
   <title>jQuery Gallery</title>
   <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 </head>
 <body>
   <div class="container clearfix">
@@ -32,26 +33,34 @@
   <script>
     //document ready
     $(function() {
-      
-      $('.previews a').on('click',function(e){
-        //get source of this a link's data source (the image)
-  
 
+      //on clicking a thumbnail image
+      $('.previews a').on('click',function(e){  
+        //get source of clicked image
         var src = $(this).attr('data-full');
-        // console.log(this + ' src: ' + src);
-
-        //src =  src.replace('small','large');
-
         //put that source onto, preview full,
         $('.full img').attr('src',src);
         
-
+        //when add selected class to clicked thumbnail, remove previous
         $('.selected').removeClass();
         $(this).addClass('selected');
 
+      });//thumbnail on click
 
-      });
-    });
+
+      $('.full img').on('mouseenter', function(e){
+        
+        $(this).fancybox({
+          'transitionIn'  : 'elastic',
+          'transitionOut' : 'elastic',
+          'speedIn'       : 600, 
+          'speedOut'      : 200, 
+          'overlayShow'   : false
+        });
+      });//full previews
+    });//document ready
+
+  
   </script>
 </body>
 </html>
