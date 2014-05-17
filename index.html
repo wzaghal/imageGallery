@@ -20,7 +20,7 @@
 
       <div class="full">
           <!-- first image is viewable to start -->
-          <img src="images/fashion/top1large.jpg" />
+          <a href="images/fashion/top1large.jpg" class="selected" data-full=""><img src="images/fashion/top1large.jpg" /></a>
       </div>
   
 
@@ -36,9 +36,11 @@
 
 
       //on clicking a thumbnail image
-      $('.previews a').on('click',function(e){  
+      $('.previews a').on('click',function(e){
+        e.preventDefault();
         //get source of clicked image
         var src = $(this).attr('data-full');
+        $('.full a').attr('href',src);
         
         $('.full img').hide();
         //put that source onto, preview full,
@@ -52,15 +54,12 @@
       });//thumbnail on click
 
 
+
       //fancy box enlarge
-      $('.full img').fancybox({
-        'transitionIn'  : 'elastic',
-        'transitionOut' : 'elastic',
-        'hideOnOverlayClick': true,
-        'speedIn'       : 600, 
-        'speedOut'      : 200, 
-        'overlayShow'   : false
-      });       
+      $('.full a').fancybox({});
+
+
+
       
     });//document ready
 
