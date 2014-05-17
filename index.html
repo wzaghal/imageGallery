@@ -34,15 +34,17 @@
     //document ready
     $(function() {
 
-      var active = false;
 
       //on clicking a thumbnail image
       $('.previews a').on('click',function(e){  
         //get source of clicked image
         var src = $(this).attr('data-full');
+        
+        $('.full img').hide();
         //put that source onto, preview full,
         $('.full img').attr('src',src);
         
+        $('.full img').fadeIn(1000);
         //when add selected class to clicked thumbnail, remove previous
         $('.selected').removeClass();
         $(this).addClass('selected');
@@ -51,18 +53,15 @@
 
 
       //fancy box enlarge
-      // $('.full img').on('mouseenter', function(e){
-        $('.full img').fancybox({
-          'transitionIn'  : 'elastic',
-          'transitionOut' : 'elastic',
-          'hideOnOverlayClick': true,
-          'speedIn'       : 600, 
-          'speedOut'      : 200, 
-          'overlayShow'   : true
-        });       
+      $('.full img').fancybox({
+        'transitionIn'  : 'elastic',
+        'transitionOut' : 'elastic',
+        'hideOnOverlayClick': true,
+        'speedIn'       : 600, 
+        'speedOut'      : 200, 
+        'overlayShow'   : false
+      });       
       
-
-      //});//full previews
     });//document ready
 
   
