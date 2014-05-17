@@ -64,6 +64,11 @@
             var nextSelection = $('.previews a.selected').next();
             updateGallery(nextSelection,src);
           }
+          else if (e.keyCode === 38){
+            src = $('.previews a.selected').prev().attr('data-full');
+            var nextSelection = $('.previews a.selected').prev();
+            updateGallery(nextSelection,src);
+          }
           });
 
 
