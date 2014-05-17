@@ -49,3 +49,12 @@
    height: 0;
    clear: both;
 }
+
+.fancybox-skin{
+  background-color: red;
+}
+
+.fancybox-nav {
+  width: 80px;
+  background-color: red;
+}
