@@ -59,6 +59,10 @@
    clear: both;
 }
 
+/*************************************************************
+  Shit I added
+ *************************************************************/
+
 /**, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
@@ -75,31 +79,31 @@
   float: left;
  /* padding: 25px;*/
 }
-
 .gallery .bottom .description,
 .gallery .bottom .buttons {
   float: left;
 }
 .gallery .bottom .description {
-  width: 60%;
+  width: 85%;
 }
 
 .gallery .bottom .buttons {
-  width: 40%;
+  width: 15%;
   display: block;
 }
 
 .gallery .bottom .buttons button{
   display: block;
-  width: 100%;
-  margin: 15px 50px 15px 0;
+  width: 96%;
+  margin: 15px 0;
   border-radius: 5px;
   height: 80px;
-  font-size: 42px;
+  font-size: 30px;
 }
 
 .album,
 .artist {
   font-size: 40px;
 }
+
 
