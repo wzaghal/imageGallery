@@ -2,26 +2,28 @@ var music = [
 	{
 		'id':1,
 		'artist':'Beatles',
-		'imageUrl':'images/albums/album-abbeyroad-large.jpg',
+		'imageUrlLarge':'images/albums/album-abbeyroad-large.jpg',
+		'imageUrlSmall':'images/albums/album-abbeyroad-small.jpg',
 		'Description':'lorem'
 	},
 	{
 		'id':2,
 		'artist':'Bob Marley',
-		'imageUrl':'images/albums/album-bobmarley-large.jpg',
+		'imageUrlLarge':'images/albums/album-bobmarley-large.jpg',
+		'imageUrlSmall':'images/albums/album-bobmarley-large.jpg',
 		'Description':'lorem'
 	},
-	{
+	{	'id':3,
 		'artist':'Pink Floyd',
-		'imageUrl':'images/albums/album-pinkfloyd-large.jpg',
+		'imageUrlLarge':'images/albums/album-pinkfloyd-large.jpg',
 		'Description':'lorem'
 	},
-	{
+	{	'id':4,
 		'artist':'Jay-Z',
 		'imageUrl':'images/albums/album-yeezus-large.jpg',
 		'Description':'lorem'
 	},
-	{
+	{	'id':5,
 		'artist':'Kanye West',
 		'imageUrl':'images/albums/album-yeezus-large.jpg',
 		'Description':'lorem'
