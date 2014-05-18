@@ -28,6 +28,7 @@
 
 .gallery .full, .gallery .full img {
     height: 600px;
+    width: 600px;
 }
 
 .gallery .previews a, .gallery .full {
