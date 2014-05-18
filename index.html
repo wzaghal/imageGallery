@@ -31,7 +31,6 @@
   <script>
     //document ready
     $(function() {
-      var position = 1;
       var src;
 
     function updateGallery(nextSelection,src){
@@ -58,14 +57,21 @@
         $(document).keyup(function(e) {
           //down button
           if (e.keyCode === 40){
-            src = $('.previews a.selected').next().attr('data-full');
-            var nextSelection = $('.previews a.selected').next();
-            updateGallery(nextSelection,src);
+            //ignore down key if last image selected
+            if ($('.previews a.selected').next().length !== 0 ){
+              src = $('.previews a.selected').next().attr('data-full');
+              var nextSelection = $('.previews a.selected').next();
+              updateGallery(nextSelection,src);
+            }
           }
+          //up button
           else if (e.keyCode === 38){
-            src = $('.previews a.selected').prev().attr('data-full');
-            var nextSelection = $('.previews a.selected').prev();
-            updateGallery(nextSelection,src);
+            //ignore up key if first image selected
+            if ($('.previews a.selected').prev().length !== 0 ){
+              src = $('.previews a.selected').prev().attr('data-full');
+              var nextSelection = $('.previews a.selected').prev();
+              updateGallery(nextSelection,src);
+            }
           }
           });
 
