@@ -23,7 +23,7 @@
 
 .gallery .previews a {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 17px;
 }
 
 .gallery .full, .gallery .full img {
@@ -51,11 +51,11 @@
    clear: both;
 }
 
-.fancybox-skin{
-  background-color: red;
+
+.gallery .previews a {
+  height: 100px;
 }
 
-.fancybox-nav {
-  width: 80px;
-  background-color: red;
-}
+
+
+
