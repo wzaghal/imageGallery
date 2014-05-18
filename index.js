@@ -66,7 +66,7 @@
 
 
       //fancy box enlarge
-      $('.full a').fancybox({});
+      $('.full a').fancybox();
 
 
 
