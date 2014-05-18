@@ -9,7 +9,7 @@
 .gallery {}
 .gallery .previews, .gallery .full, .gallery .desc {
     float: left;
-    margin-right: 10px;
+    margin-right: 17px;
 }
 
 .gallery .desc, .gallery .full {
