@@ -76,6 +76,30 @@
  /* padding: 25px;*/
 }
 
+.gallery .bottom .description,
+.gallery .bottom .buttons {
+  float: left;
+}
+.gallery .bottom .description {
+  width: 60%;
+}
 
+.gallery .bottom .buttons {
+  width: 40%;
+  display: block;
+}
 
+.gallery .bottom .buttons button{
+  display: block;
+  width: 100%;
+  margin: 15px 50px 15px 0;
+  border-radius: 5px;
+  height: 80px;
+  font-size: 42px;
+}
+
+.album,
+.artist {
+  font-size: 40px;
+}
 
