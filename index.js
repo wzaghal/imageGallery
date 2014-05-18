@@ -2,6 +2,23 @@
     $(function() {
       var src;
 
+      function init(){
+        //initialise all a data-full
+      $('.previews a').each(function(index){
+        $(this).attr('data-full',music[index].imageUrlLarge);
+      });
+      //initialise all img srcs
+      $('.previews a img').each(function(index){
+        $(this).attr('src',music[index].imageUrlSmall);
+      });
+
+      $('.full a ').attr('href',music[0].imageUrlLarge);
+      $('.full a img ').attr('src',music[0].imageUrlLarge);
+      $('.artist').empty().append(music[0].artist);
+
+    }
+
+    init();
     function updateGallery(nextSelection,src){
         $('.full a').attr('href',src);
         
@@ -13,6 +30,9 @@
         //when add selected class to clicked thumbnail, remove previous
         $('.selected').removeClass();
         $(nextSelection).addClass('selected');
+
+        //update artist name, album name, description
+        $('.artist').empty().append(music[0].artist);
     }
 
       //on clicking a thumbnail image
@@ -46,7 +66,7 @@
 
 
       //fancy box enlarge
-      $('.full a').fancybox({});
+      $('.full a').fancybox();
 
 
 
