@@ -41,7 +41,37 @@ var music = [
 		'songUrl':'http://rovimusic.rovicorp.com/playback.mp3?c=uLr7yniBEQZOE6_SMVyX7fKUU23ZQzDPVjJ3ONioHGo=&f=J',
 		'description':'It\'s inevitable that the usual litany of labels and put-downs dominates Jay-Z\'s concerns; Shawn Carter\'s wraps-to-riches story is the meta-narrative to all his albums and only fades a little in the umpteenth retelling. ... [But] it\'s the varied production – the sinuous work of Timbaland, in the main--that really elevates Magna Carta Holy Grail beyond the usual Jay-Z document.',
 	}
-]
+];
+
+
+
+
+
+
+  //
+  function updateMusicInfo(i){
+    $('.artist').empty().append(music[i].artist);
+    $('.album').empty().append(music[i].album);
+    $('.album-info').empty().append(music[i].description);
+  }
+
+  //
+  function getMusicIndex(imageUrlLarge){
+    var isDone = false; var i = 0;
+
+    //find the music object that has
+    //the same imageURL as the one provided
+    while (!isDone && i < music.length){
+        if (imageUrlLarge === music[i].imageUrlLarge){
+            console.log(music[i]);
+            isDone= true;
+        }
+        else{
+            i++;
+        }
+    }//while
+    return i;
+  }
 
 
 
