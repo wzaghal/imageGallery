@@ -73,6 +73,13 @@ $(function() {
             }
         }
     });//arrow key nav
+
+  $('.buttons button#preview').on('click',function(e){
+    e.preventDefault();
+    var audio = document.getElementsByTagName("audio")[0];
+    console.log(audio);
+    audio.play();
+  });
     
 });//document ready
 
