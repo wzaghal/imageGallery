@@ -1,103 +1,79 @@
 //document ready
 $(function() {
 
-	var src;
-	var currentMusicIndex = 0;
+    var src;
+    var currentMusicIndex = 0;
 
   init();  
 
   //fancy box enlarge
   $('.full a').fancybox();
 
-	function init(){
-		//initialise all a data-full
-  	$('.previews a').each(function(index){
-  		$(this).attr('data-full',music[index].imageUrlLarge);
-  	});
-  	//initialise all img srcs
-  	$('.previews a img').each(function(index){
-  		$(this).attr('src',music[index].imageUrlSmall);
-  	});
+    function init(){
+        //initialise all a data-full
+    $('.previews a').each(function(index){
+        $(this).attr('data-full',music[index].imageUrlLarge);
+    });
+    //initialise all img srcs
+    $('.previews a img').each(function(index){
+        $(this).attr('src',music[index].imageUrlSmall);
+    });
 
-	updateMusicInfo(0);
+    updateMusicInfo(0);
 
   }
 
   //
   function updateGallery(nextSelection,src){
 
-		updateMusicInfo(getMusicIndex(src));
-		$('.full a').attr('href',src);
-		
-		$('.full img').hide();
-		//put that source onto, preview full,
-		$('.full img').attr('src',src);
-		
-		$('.full img').fadeIn(1000);
-		//when add selected class to clicked thumbnail, remove previous
-		$('.selected').removeClass();
-		$(nextSelection).addClass('selected');
+        updateMusicInfo(getMusicIndex(src));
+        $('.full a').attr('href',src);
+        
+        $('.full img').hide();
+        //put that source onto, preview full,
+        $('.full img').attr('src',src);
+        
+        $('.full img').fadeIn(1000);
+        //when add selected class to clicked thumbnail, remove previous
+        $('.selected').removeClass();
+        $(nextSelection).addClass('selected');
 
-		//update artist name, album name, description by using currentMusicIndex variable.
+        //update artist name, album name, description by using currentMusicIndex variable.
   }
 
-  //
-  function updateMusicInfo(i){
-  	$('.artist').empty().append(music[i].artist);
-  	$('.album').empty().append(music[i].album);
-  	$('.album-info').empty().append(music[i].description);
-  }
 
-  //
-  function getMusicIndex(imageUrlLarge){
-  	var isDone = false; var i = 0;
-
-  	//find the music object that has
-  	//the same imageURL as the one provided
-  	while (!isDone && i < music.length){
-  		if (imageUrlLarge === music[i].imageUrlLarge){
-  			console.log(music[i]);
-  			isDone= true;
-  		}
-  		else{
-  			i++;
-  		}
-  	}//while
-  	return i;
-  }
-
-	//on clicking a thumbnail image
-	$('.previews a').on('click',function(e){
-		e.preventDefault();
-		src = $(this).attr('data-full');
-		currentMusicIndex++;
-		updateGallery(this,src);
-	});//thumbnail on click
+    //on clicking a thumbnail image
+    $('.previews a').on('click',function(e){
+        e.preventDefault();
+        src = $(this).attr('data-full');
+        currentMusicIndex++;
+        updateGallery(this,src);
+    });//thumbnail on click
 
   //navigate images using arrow key 
-	$(document).keyup(function(e) {
-		//down button
-		if (e.keyCode === 40){
-			//ignore down key if last image selected
-			if ($('.previews a.selected').next().length !== 0 ){
-				src = $('.previews a.selected').next().attr('data-full');
-				var nextSelection = $('.previews a.selected').next();
-				currentMusicIndex++;
-				updateGallery(nextSelection,src);
-			}
-		}
-		//up button
-		else if (e.keyCode === 38){
-			//ignore up key if first image selected
-			if ($('.previews a.selected').prev().length !== 0 ){
-				src = $('.previews a.selected').prev().attr('data-full');
-				var nextSelection = $('.previews a.selected').prev();
-				currentMusicIndex--;
-				updateGallery(nextSelection,src);
-			}
-		}
-	});//arrow key nav
-	
+    $(document).keyup(function(e) {
+        //down button
+        if (e.keyCode === 40){
+            //ignore down key if last image selected
+            if ($('.previews a.selected').next().length !== 0 ){
+                src = $('.previews a.selected').next().attr('data-full');
+                var nextSelection = $('.previews a.selected').next();
+                currentMusicIndex++;
+                updateGallery(nextSelection,src);
+            }
+        }
+        //up button
+        else if (e.keyCode === 38){
+            //ignore up key if first image selected
+            if ($('.previews a.selected').prev().length !== 0 ){
+                src = $('.previews a.selected').prev().attr('data-full');
+                var nextSelection = $('.previews a.selected').prev();
+                currentMusicIndex--;
+                updateGallery(nextSelection,src);
+            }
+        }
+    });//arrow key nav
+    
 });//document ready
 
-	
+    
