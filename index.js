@@ -2,6 +2,9 @@
 $(function() {
 
     var src;
+
+    //unfortunate quick fix to audio element
+    //problem  
     var currentMusicIndex = 0;
 
   init();  
@@ -82,12 +85,8 @@ $(function() {
 
     //clicking 'play' plays song
     $('.buttons button#preview').on('click',function(e){
-      // e.preventDefault();
-      // var audio = document.getElementsByTagName("audio")[0];
-      // console.log(audio);
-      // audio.play();
-
-
+        e.preventDefault();
+        $('audio')[currentMusicIndex].play();
   });
     
 });//document ready
