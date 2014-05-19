@@ -1,6 +1,7 @@
 //document ready
     $(function() {
       var src;
+      var currentMusicIndex = 0;
 
       function init(){
         //initialise all a data-full
@@ -31,14 +32,22 @@
         $('.selected').removeClass();
         $(nextSelection).addClass('selected');
 
-        //update artist name, album name, description
-        $('.artist').empty().append(music[0].artist);
+        //update artist name, album name, description by using currentMusicIndex variable.
+
+        
+        updateMusicInfo();
+    }
+
+    function updateMusicInfo(){
+      $('.artist').empty().append(music[currentMusicIndex].artist);
+      $('.album').empty().append(music[currentMusicIndex].album);
     }
 
       //on clicking a thumbnail image
       $('.previews a').on('click',function(e){
         e.preventDefault();
         src = $(this).attr('data-full');
+        currentMusicIndex++;
         updateGallery(this,src);
 
       });//thumbnail on click
@@ -50,6 +59,7 @@
             if ($('.previews a.selected').next().length !== 0 ){
               src = $('.previews a.selected').next().attr('data-full');
               var nextSelection = $('.previews a.selected').next();
+              currentMusicIndex++;
               updateGallery(nextSelection,src);
             }
           }
@@ -59,6 +69,7 @@
             if ($('.previews a.selected').prev().length !== 0 ){
               src = $('.previews a.selected').prev().attr('data-full');
               var nextSelection = $('.previews a.selected').prev();
+              currentMusicIndex--;
               updateGallery(nextSelection,src);
             }
           }
