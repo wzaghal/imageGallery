@@ -20,11 +20,12 @@ $(function() {
     });
 
     updateMusicInfo(0);
+    src = music[0].imageUrlLarge;
 
   }
 
   //
-  function updateGallery(nextSelection,src){
+  function updateGallery(selection,src){
 
         updateMusicInfo(getMusicIndex(src));
         $('.full a').attr('href',src);
@@ -36,7 +37,7 @@ $(function() {
         $('.full img').fadeIn(1000);
         //when add selected class to clicked thumbnail, remove previous
         $('.selected').removeClass();
-        $(nextSelection).addClass('selected');
+        $(selection).addClass('selected');
 
         //update artist name, album name, description by using currentMusicIndex variable.
   }
@@ -73,6 +74,17 @@ $(function() {
             }
         }
     });//arrow key nav
+
+    //clicking 'buy' adds to cart
+    $('#buy').on('click',function(){
+
+    });
+
+    //clicking 'play' plays song
+    $('#preview').on('click',function(){
+
+    });
+
     
 });//document ready
 

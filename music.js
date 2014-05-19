@@ -46,8 +46,6 @@ var music = [
 
 
 
-
-
   //
   function updateMusicInfo(i){
     $('.artist').empty().append(music[i].artist);
