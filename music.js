@@ -51,6 +51,7 @@ var music = [
     $('.artist').empty().append(music[i].artist);
     $('.album').empty().append(music[i].album);
     $('.album-info').empty().append(music[i].description);
+    $('source').attr('src',music[i].songUrl);
   }
 
   //
