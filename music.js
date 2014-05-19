@@ -48,10 +48,14 @@ var music = [
 
   //
   function updateMusicInfo(i){
+
+
     $('.artist').empty().append(music[i].artist);
     $('.album').empty().append(music[i].album);
     $('.album-info').empty().append(music[i].description);
-    $('source').attr('src',music[i].songUrl);
+
+    //quick fix to get audio component working
+  	currentMusicIndex = i;
   }
 
   //
