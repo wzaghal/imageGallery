@@ -30,7 +30,7 @@ var music = [
 		'imageUrlLarge':'images/albums/album-yeezus-large.jpg',
 		'imageUrlSmall':'images/albums/album-yeezus-small.jpg',
 		'songUrl': 'http://rovimusic.rovicorp.com/playback.mp3?c=S7a9VAlyH9WMuBxFUW_5_TqpU4hxl5saPDaNIVORh-E=&f=J',
-		'description':'"Yeezus" is a medley of several genres -- new wave, punk, rock, and of course hip-hop. Those looking for vintage soul sounds or even full-on raps from start to finish will be thrown several curves here. It\’s an album with numerous emotional layers as well. There are a few lighthearted moments, and cuts about love along with lust.',
+		'description':'"Yeezus" is a medley of several genres -- new wave, punk, rock, and of course hip-hop. Those looking for vintage soul sounds or even full-on raps from start to finish will be thrown several curves here. Its an album with numerous emotional layers as well. There are a few lighthearted moments, and cuts about love along with lust.',
 		'isPurchased':false	
 	},
 	{	'id':4,
@@ -48,7 +48,7 @@ var music = [
 		'imageUrlLarge':'images/albums/album-magnacarta-large.jpg',
 		'imageUrlSmall':'images/albums/album-magnacarta-small.jpg',
 		'songUrl':'http://rovimusic.rovicorp.com/playback.mp3?c=uLr7yniBEQZOE6_SMVyX7fKUU23ZQzDPVjJ3ONioHGo=&f=J',
-		'description':'It\'s inevitable that the usual litany of labels and put-downs dominates Jay-Z\'s concerns; Shawn Carter\'s wraps-to-riches story is the meta-narrative to all his albums and only fades a little in the umpteenth retelling... [But] it\'s the varied production - the sinuous work of Timbaland, that really elevates Magna Carta Holy Grail beyond the usual Jay-Z document.',
+		'description':'It\'s inevitable that the usual litany of labels and put-downs dominates Jay-Z\'s concerns; Shawn Carter\'s wraps-to-riches story is the meta-narrative to all his albums and only fades a little in the umpteenth retelling... [But] it\'s the varied production - the sinuous work of Timbaland, really elevates Magna Carta Holy Grail.',
 		'isPurchased':false	
 	}
 ];
