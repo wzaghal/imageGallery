@@ -67,7 +67,6 @@ var music = [
     $('.album-info').empty().append(music[i].description);
     if (!music[i].isPurchased){
     	$('#buy').removeClass('purchased');
-    	console.log('test');
     }else{
     	$('#buy').addClass('purchased');
     }
@@ -84,7 +83,6 @@ var music = [
     //the same imageURL as the one provided
     while (!isDone && i < music.length){
         if (imageUrlLarge === music[i].imageUrlLarge){
-            console.log(music[i]);
             isDone= true;
         }
         else{
