@@ -89,10 +89,24 @@ $(function() {
 
 	});
 
+	//reset total bought items
+	$('svg').on('click',function(){ 
+		purchased = 0;
+		for (var i = 0; i < music.length; i++){
+			music[i].isPurchased = false;
+			$('#buy').removeClass('purchased');
+			$('#total').text('');
+		}
+	});
+
 	//clicking 'play' plays song
 	$('.buttons button#preview').on('click',function(e){
 		
 		e.preventDefault();
+
+		for (var i = 0; i < music.length; i++) {
+			$('audio')[i].pause();
+		}
 
 		$('audio')[currentMusicIndex].play();
   });

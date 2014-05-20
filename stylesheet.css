@@ -11,7 +11,7 @@
 .gallery .full, 
 .gallery .desc {
     float: left;
-    margin-right: 17px;
+    margin-right: 18px;
 }
 
 .gallery .desc, 
@@ -63,7 +63,7 @@
 }
 
 /*************************************************************
-  Shit I added
+  NOTE: NOT QUICK AND DIRTY STYLING, CODE IS NOT OPTIMIZED;
  *************************************************************/
 
 /**, *:before, *:after {
@@ -141,6 +141,10 @@ svg {
   top: 18px;
   right: 65px;
 }
+
+svg:hover {
+  fill: #3498db;
+}
 .bottom {
   background-color:#bdc3c7;
 }
@@ -162,6 +166,10 @@ button:hover {
 color: #2980b9;
 }
 
+button:focus {
+  outline: none;
+}
+
 .description li {
   list-style: none;
   color: #3498db;
@@ -178,6 +186,14 @@ color: #2980b9;
 .description li.album-info {
   color: #2c3e50;
   font-family: 'Lato', sans-serif;
+}
+
+#total {
+  color: white;
+  position: absolute;
+  font-size: 45px;
+  top: 18px;
+  right: 130px;
 }
 
 

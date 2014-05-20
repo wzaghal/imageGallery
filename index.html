@@ -33,7 +33,7 @@
           <a href="#" data-full=""><img src="" /></a>
           <a href="#" data-full=""><img src="" /></a>
           <a href="#" data-full=""><img src="" /></a>
-      </div>
+      </div><!-- previews -->
 
       <div class="full">
           <!-- first image is viewable to start -->
@@ -48,12 +48,15 @@
           </ul>
         </div><!-- description -->
         <div class="buttons">
-          <button id="preview">&#9658;</button>
+          <button id="preview">&#9658;</button> <!-- play button -->
           <button id="buy">Buy</button>
         </div><!-- buttons -->
       </div><!-- bottom -->
     </div><!-- gallery -->
   </div><!-- container -->
+
+<!--   quick and dirty implementation, 
+  working on single audio tag that swaps out src attribute. -->
   <audio>
     <source 
       src="http://rovimusic.rovicorp.com/playback.mp3?c=j0IW4o-WinqVfwctc53hXP3pqi0RS20pHqZddGAWQOA=&f=J" type="audio/mpeg">
@@ -75,9 +78,13 @@
       src="http://rovimusic.rovicorp.com/playback.mp3?c=uLr7yniBEQZOE6_SMVyX7fKUU23ZQzDPVjJ3ONioHGo=&f=J" type="audio/mpeg">
   </audio>
 
+  <!-- music JSON and functions -->
   <script src="music.js"></script>
+  <!-- jQuery -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- fancy box -->
   <script src="fancybox/jquery.fancybox.js?v=2.1.4"></script>
+  <!-- main js file -->
   <script src="index.js"></script>
 </body>
 </html>
