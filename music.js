@@ -1,9 +1,8 @@
-//unfortunate quick fix to audio element problem
+//updated when another image
+//is selected
 var currentMusicIndex = 0;
-//alternative thought: 
-//Pros: global index means less computations to figure out
-//the index.
-//Cons: Seems like a cop out.
+
+
 
 var music = [
 	{
@@ -57,8 +56,28 @@ var music = [
 
 
 
+  //Compares the imageURL parameter
+  //with each imageURL from Music
+  //in order to return the index
+  function getMusicIndex(imageUrlLarge){
+    var isDone = false; var i = 0;
 
-  //
+    //find the music object that has
+    //the same imageURL as the one provided
+    while (!isDone && i < music.length){
+        if (imageUrlLarge === music[i].imageUrlLarge){
+            isDone= true;
+        }
+        else{
+            i++;
+        }
+    }//while
+    return i;
+  }
+
+  //Give an index,
+  //updates the artist,album,album-info
+  //and whether user can buy album.
   function updateMusicInfo(i){
 
 
@@ -75,22 +94,7 @@ var music = [
   	currentMusicIndex = i;
   }
 
-  //
-  function getMusicIndex(imageUrlLarge){
-    var isDone = false; var i = 0;
-
-    //find the music object that has
-    //the same imageURL as the one provided
-    while (!isDone && i < music.length){
-        if (imageUrlLarge === music[i].imageUrlLarge){
-            isDone= true;
-        }
-        else{
-            i++;
-        }
-    }//while
-    return i;
-  }
+  
 
 
 

@@ -91,7 +91,9 @@ $(function() {
 
 	//clicking 'play' plays song
 	$('.buttons button#preview').on('click',function(e){
+		
 		e.preventDefault();
+
 		$('audio')[currentMusicIndex].play();
   });
 	
