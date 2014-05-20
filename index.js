@@ -4,31 +4,30 @@ $(function() {
 	var src;
 	var purchased=0;
 
-  init();  
+  	init();  
 
-  //fancy box enlarge
-  $('.full a').fancybox();
+  	//fancy box enlarge
+  	$('.full a').fancybox();
 
 	function init(){
-		//initialize all a data-full
-	$('.previews a').each(function(index){
-		$(this).attr('data-full',music[index].imageUrlLarge);
-	});
-	//initialize all img srcs
-	$('.previews a img').each(function(index){
-		$(this).attr('src',music[index].imageUrlSmall);
-	});
+		//initialize all a-tags data-full
+		$('.previews a').each(function(index){
+			$(this).attr('data-full',music[index].imageUrlLarge);
+		});
+		//initialize all img srcs
+		$('.previews a img').each(function(index){
+			$(this).attr('src',music[index].imageUrlSmall);
+		});
 
-	updateMusicInfo(0);
-	src = music[0].imageUrlLarge;
+		updateMusicInfo(0);
+		src = music[0].imageUrlLarge;
 
-	//
-	$('.full img').attr('src',music[0].imageUrlLarge);
+		$('.full img').attr('src',music[0].imageUrlLarge);
+  	}//init
 
-  }
-
-  //
-  function updateGallery(selection,src){
+ 	
+ 	//update artist name, album name, description by using currentMusicIndex variable.
+  	function updateGallery(selection,src){
 
 		updateMusicInfo(getMusicIndex(src));
 		$('.full a').attr('href',src);
@@ -42,8 +41,8 @@ $(function() {
 		$('.selected').removeClass();
 		$(selection).addClass('selected');
 
-		//update artist name, album name, description by using currentMusicIndex variable.
-  }
+		
+  	}//update gal
 
 
 	//on clicking a thumbnail image
@@ -54,7 +53,7 @@ $(function() {
 		updateGallery(this,src);
 	});//thumbnail on click
 
-  //navigate images using arrow key 
+  	//navigate images using arrow key 
 	$(document).keyup(function(e) {
 		//down button
 		if (e.keyCode === 40){
@@ -86,12 +85,12 @@ $(function() {
 			$('#total').text(purchased);
 			$('#buy').addClass('purchased');
 		}
-
 	});
 
 	//reset total bought items
 	$('svg').on('click',function(){ 
 		purchased = 0;
+		//quick and dirty;
 		for (var i = 0; i < music.length; i++){
 			music[i].isPurchased = false;
 			$('#buy').removeClass('purchased');
@@ -101,15 +100,16 @@ $(function() {
 
 	//clicking 'play' plays song
 	$('.buttons button#preview').on('click',function(e){
-		
 		e.preventDefault();
 
+		//quick and dirty.
 		for (var i = 0; i < music.length; i++) {
 			$('audio')[i].pause();
 		}
 
+		//need to add ability to pause current track
 		$('audio')[currentMusicIndex].play();
-  });
+  	});
 	
 });//document ready
 

@@ -26,7 +26,7 @@
 
 .gallery .previews a {
     display: block;
-    margin-bottom: 17px;
+    margin-bottom: 18px;
 }
 
 .gallery .full, 
@@ -186,6 +186,8 @@ button:focus {
 .description li.album-info {
   color: #2c3e50;
   font-family: 'Lato', sans-serif;
+  margin-top: 8px;
+  /*line-height: 1.3em; */
 }
 
 #total {
