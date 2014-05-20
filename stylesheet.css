@@ -42,9 +42,12 @@
     border: 4px solid #eee;
 }
 
-.gallery .previews a:hover,
 .gallery .previews a.selected {
-    border: 4px solid #777;
+    border: 4px solid #bdc3c7;
+}
+
+.gallery .previews a:hover {
+  border: 4px solid #3498db;
 }
 
 .gallery .full img:hover {
@@ -78,17 +81,20 @@ body {
 
 .gallery .bottom {
   
-  height: 200px;
+  height: 250px;
   width: 725px;
   float: left;
  /* padding: 25px;*/
 }
-.gallery .bottom .description,
-.gallery .bottom .buttons {
+.gallery .bottom .description{
   float: left;
 }
+
+.gallery .bottom .buttons {
+  float: right;
+}
 .gallery .bottom .description {
-  width: 80%;
+  width: 75%;
 }
 
 .gallery .bottom .buttons {
@@ -99,7 +105,7 @@ body {
 .gallery .bottom .buttons button{
   display: block;
   width: 70%;
-  margin: 15px 0;
+  margin: 30px 0;
   border-radius: 10px;
   height: 80px;
   font-size: 30px;
@@ -132,10 +138,28 @@ svg {
   height: 50px;
   vertical-align: bottom;
   position: absolute;
+  top: 18px;
   right: 65px;
 }
 .bottom {
   background-color:#bdc3c7;
+}
+
+button {
+  background-color: #eee;
+  color: #3498db ;
+   
+  border: none;
+}
+
+.purchased{
+  background-color: #bdc3c7;
+  color:#2c3e50;
+}
+
+button:hover {
+  box-shadow: 1px 3px 5px grey; 
+color: #2980b9;
 }
 
 .description li {
@@ -143,11 +167,12 @@ svg {
   color: #3498db;
 }
 
+
 .description li .album {
-  font-size: 48px;
+  font-size: 42px;
 }
 .description li .artist {
-  font-size: 30px;
+  font-size: 23px;
 }
 
 .description li.album-info {

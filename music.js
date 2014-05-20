@@ -1,3 +1,10 @@
+//unfortunate quick fix to audio element problem
+var currentMusicIndex = 0;
+//alternative thought: 
+//Pros: global index means less computations to figure out
+//the index.
+//Cons: Seems like a cop out.
+
 var music = [
 	{
 		'id':1,
@@ -6,8 +13,8 @@ var music = [
 		'imageUrlLarge':'images/albums/album-abbeyroad-large.jpg',
 		'imageUrlSmall':'images/albums/album-abbeyroad-small.jpg',
 		'songUrl': 'http://rovimusic.rovicorp.com/playback.mp3?c=j0IW4o-WinqVfwctc53hXP3pqi0RS20pHqZddGAWQOA=&f=J',
-		'description':'Abbey Road shows a band still clearly in its prime, capable of songwriting and recording feats other groups could only envy. Working for the first time exclusively on an eight-track tape machine, their mastery of the studio was undeniable, and Abbey Road still sounds fresh and exciting 40 years on (indeed, of the 2009 remasters, the improvements and sonic detail here are the most striking). There\'s not a duff note on the damn thing.',
-		'isPurchased':false	
+		'description':'Abbey Road shows a band still clearly in its prime, capable of songwriting and recording feats other groups could only envy. Working for the first time exclusively on an eight-track tape machine, their mastery of the studio was undeniable, and Abbey Road still sounds fresh and exciting 40 years on (indeed, of the 2009 remasters, the improvements and sonic detail here are the most striking). There\'s not a duff note.',
+		'isPurchased':false
 	},
 	{
 		'id':2,
@@ -17,7 +24,7 @@ var music = [
 		'imageUrlSmall':'images/albums/album-bobmarley-small.jpg',
 		'songUrl': 'http://rovimusic.rovicorp.com/playback.mp3?c=QnFvsNJ3H76juK_9zVYqyWjIb8Tr8vVfGLIuM5x_WSg=&f=J',
 		'description':'The classic Marley album, the one that any fair-weather reggae fan owns, Legend contains 14 of his greatest songs. Some may argue that the compilation shortchanges his groundbreaking early ska work or his status as a political commentator, but this isn\'t meant to be definitive, it\'s meant to be an introduction, sampling the very best of his work. And it does that remarkably well, offering all of his genre-defying greats and an illustration of his excellence, warmth, and humanity.',
-		'isPurchased':false	
+		'isPurchased':false
 	},
 	{	'id':3,
 		'artist':'Kanye West',
@@ -58,6 +65,12 @@ var music = [
     $('.artist').empty().append(music[i].artist);
     $('.album').empty().append(music[i].album);
     $('.album-info').empty().append(music[i].description);
+    if (!music[i].isPurchased){
+    	$('#buy').removeClass('purchased');
+    	console.log('test');
+    }else{
+    	$('#buy').addClass('purchased');
+    }
 
     //quick fix to get audio component working
   	currentMusicIndex = i;
