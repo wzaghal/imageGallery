@@ -106,7 +106,7 @@ body {
 }
 
 .album,
-.artist {
+.artist, #total {
   font-size: 40px;
 }
 .header {

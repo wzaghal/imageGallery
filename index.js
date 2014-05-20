@@ -2,9 +2,14 @@
 $(function() {
 
 	var src;
+	var purchased=0;
 
 	//unfortunate quick fix to audio element problem
 	var currentMusicIndex = 0;
+	//alternative thought: 
+	//Pros: global index means less computations to figure out
+	//the index.
+	//Cons: Seems like a cop out.
 
   init();  
 
@@ -82,7 +87,9 @@ $(function() {
 
 	//clicking 'buy' adds to cart
 	$('#buy').on('click',function(){
-		//To Do
+		purchased++;
+		(getMusicIndex($('.previews a.selected')));
+		$('#total').text(purchased);
 	});
 
 	//clicking 'play' plays song
