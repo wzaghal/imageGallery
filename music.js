@@ -6,7 +6,7 @@ var music = [
 		'imageUrlLarge':'images/albums/album-abbeyroad-large.jpg',
 		'imageUrlSmall':'images/albums/album-abbeyroad-small.jpg',
 		'songUrl': 'http://rovimusic.rovicorp.com/playback.mp3?c=j0IW4o-WinqVfwctc53hXP3pqi0RS20pHqZddGAWQOA=&f=J',
-		'description':'Abbey Road shows a band still clearly in its prime, capable of songwriting and recording feats other groups could only envy. Working for the first time exclusively on an eight-track tape machine, their mastery of the studio was undeniable, and Abbey Road still sounds fresh and exciting 40 years on (indeed, of the 2009 remasters, the improvements and sonic detail here are the most striking). There\'s not a duff note on the damn thing.'
+		'description':'Abbey Road shows a band still clearly in its prime, capable of songwriting and recording feats other groups could only envy. Working for the first time exclusively on an eight-track tape machine, their mastery of the studio was undeniable, and Abbey Road still sounds fresh and exciting 40 years on (indeed, of the 2009 remasters, the improvements and sonic detail here are the most striking). There\'s not a duff note.'
 	},
 	{
 		'id':2,
